@@ -1,0 +1,13 @@
+{
+    "name":"kutybait/phpconsole-magento",
+    "type":"magento-module",
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    },
+    "extra":{
+        "map":[
+            ["app/etc/modules/KutybaIt_PhpConsole.xml", "app/etc/modules/KutybaIt_PhpConsole.xml"],
+            ["app/code/community/KutybaIt/PhpConsole/", "app/code/community/KutybaIt/PhpConsole/"]
+        ]
+    }
+}
