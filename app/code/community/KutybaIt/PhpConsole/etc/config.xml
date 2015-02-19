@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+  * @category  KutybaIt
+  * @package   KutybaIt_PhpConsole
+  * @author    Mateusz Kutyba <mateusz.kutyba@gmail.com>
+  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+  */
+-->
+<config>
+    <modules>
+        <KutybaIt_PhpConsole>
+            <version>0.1.0</version>
+        </KutybaIt_PhpConsole>
+    </modules>
+
+    <global>
+        <models>
+            <phpconsole>
+                <class>KutybaIt_PhpConsole_Model</class>
+            </phpconsole>
+        </models>
+        <helpers>
+            <phpconsole>
+                <class>KutybaIt_PhpConsole_Helper</class>
+            </phpconsole>
+        </helpers>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <init_phpconsole>
+                        <type>model</type>
+                        <class>phpconsole/observer</class>
+                        <method>initPhpConsole</method>
+                    </init_phpconsole>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </global>
+
+    <default>
+        <dev>
+            <debug>
+                <phpconsole>1</phpconsole>
+            </debug>
+        </dev>
+    </default>
+
+</config>
